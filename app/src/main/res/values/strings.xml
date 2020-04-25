@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Controle de Pedidos</string>
+    <string name="title_activity_adicionar_produto">Adicionar Produto</string>
+</resources>
