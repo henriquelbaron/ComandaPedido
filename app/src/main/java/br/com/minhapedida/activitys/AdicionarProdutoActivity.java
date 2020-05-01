@@ -1,4 +1,4 @@
-package br.com.minhapedida;
+package br.com.minhapedida.activitys;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,7 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import br.com.minhapedida.R;
 import br.com.minhapedida.control.AdicionarProdutoControl;
 
 public class AdicionarProdutoActivity extends AppCompatActivity {
@@ -20,6 +21,12 @@ public class AdicionarProdutoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_produto);
         initParams();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        control.configSpinner();
     }
 
     public void initParams() {
@@ -47,4 +54,9 @@ public class AdicionarProdutoActivity extends AppCompatActivity {
     public void enviar(View view) {
         control.addProduto();
     }
+
+    public void addProduto(View view) {
+        control.callCadastroProdutoActivity();
+    }
+
 }

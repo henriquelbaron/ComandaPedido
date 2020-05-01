@@ -1,4 +1,4 @@
-package br.com.minhapedida.modal;
+package br.com.minhapedida.modal.domain;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
@@ -13,6 +13,7 @@ public class Pedido implements Serializable {
 
     @DatabaseField(canBeNull = false)
     private Integer quantidade;
+
 
     @DatabaseField(canBeNull = false, foreign = true)
     private Produto produto;
@@ -65,6 +66,6 @@ public class Pedido implements Serializable {
 
     @Override
     public String toString() {
-        return produto.getNome() + " - " + String.format("%.2f",produto.getValor()) + " - " + quantidade + " - " + getSubTotalFormatado();
+        return produto.getNome() + " - " + String.format("%.2f", produto.getValor()) + " - " + quantidade + " - " + getSubTotalFormatado();
     }
 }

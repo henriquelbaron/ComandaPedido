@@ -8,13 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MesaActivity"></activity>
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".AdicionarProdutoActivity"
+            android:name=".activitys.CadastroProdutoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activitys.AdicionarProdutoActivity"
             android:label="@string/title_activity_adicionar_produto"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

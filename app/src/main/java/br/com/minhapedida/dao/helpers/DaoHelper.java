@@ -15,6 +15,7 @@ public class DaoHelper<T> {
         this.className = className;
         if(mInstance==null) mInstance = new MyORMLiteHelper(c.getApplicationContext());
     }
+
     public Dao<T, Integer> getDao(){
         try {
             return mInstance.getDao(className);

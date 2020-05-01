@@ -5,20 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/senacclogo1301"
     android:padding="15dp"
-    tools:context=".MainActivity">
+    tools:context=".activitys.MainActivity">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Minha Comanda"
-    android:textSize="30sp"/>
+    android:textAlignment="center"
+    android:text="@string/main_tela_main_activity"
+    android:textSize="30sp"
+    android:gravity="center_horizontal" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_customizado"
         android:onClick="addAction"
-        android:text="Adcionar Produto"
+        android:text="@string/adcionar_produto"
         android:textColor="@color/white" />
 
     <Button
@@ -27,7 +30,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/button_customizado"
         android:onClick="limparListaAction"
-        android:text="Limpar Lista"
+        android:text="@string/limpar_lista"
         android:textColor="@color/white" />
 
     <TextView

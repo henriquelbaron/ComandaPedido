@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">Controle de Pedidos</string>
     <string name="title_activity_adicionar_produto">Adicionar Produto</string>
+    <string name="nome_do_produto">Nome do Produto</string>
+    <string name="main_tela_cadastro_produtos">Cadastro de Produtos</string>
+    <string name="valor">Valor</string>
+    <string name="ativo">Ativo</string>
+    <string name="salvar">Salvar</string>
+    <string name="produtos">Produtos</string>
+    <string name="realizar_pedido">Realizar Pedido</string>
+    <string name="limpar_lista">Limpar Lista</string>
+    <string name="adcionar_produto">Adcionar Produto</string>
+    <string name="main_tela_main_activity">Minha Comanda</string>
+    <string name="main_tela_pedidos">Pedidos</string>
+    <string name="salvo_sucesso">Salvo com Sucesso</string>
+    <string name="salvar_valor_invalido">Valor Inválido</string>
+    <string name="salvar_erro_persistir">Erro ao persistir</string>
+    <string name="salvar_nome_invalido">Nome Inválido</string>
+    <string name="voltar">Voltar</string>
 </resources>

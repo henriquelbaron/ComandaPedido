@@ -1,14 +1,13 @@
-package br.com.minhapedida;
-
-import androidx.appcompat.app.AppCompatActivity;
+package br.com.minhapedida.activitys;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
+import br.com.minhapedida.R;
 import br.com.minhapedida.control.MainControl;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,11 +29,12 @@ public class MainActivity extends AppCompatActivity {
         control.confListView();
     }
 
-    public void initParams(){
+    public void initParams() {
         listView = findViewById(R.id.listProdutos);
         total = findViewById(R.id.total);
         control = new MainControl(this);
     }
+
     public void limparListaAction(View view) {
         control.clearAll();
     }

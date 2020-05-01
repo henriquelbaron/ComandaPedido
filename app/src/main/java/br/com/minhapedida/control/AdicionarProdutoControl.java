@@ -1,14 +1,16 @@
 package br.com.minhapedida.control;
 
+import android.content.Intent;
 import android.widget.ArrayAdapter;
 
 import java.sql.SQLException;
 
-import br.com.minhapedida.AdicionarProdutoActivity;
+import br.com.minhapedida.activitys.AdicionarProdutoActivity;
+import br.com.minhapedida.activitys.CadastroProdutoActivity;
 import br.com.minhapedida.dao.PedidoDao;
 import br.com.minhapedida.dao.ProdutoDao;
-import br.com.minhapedida.modal.Pedido;
-import br.com.minhapedida.modal.Produto;
+import br.com.minhapedida.modal.domain.Pedido;
+import br.com.minhapedida.modal.domain.Produto;
 
 public class AdicionarProdutoControl {
 
@@ -28,7 +30,7 @@ public class AdicionarProdutoControl {
 
     private void configNumberPicker() {
         activity.getQuantidade().setMinValue(1);
-        activity.getQuantidade().setMaxValue(30);
+        activity.getQuantidade().setMaxValue(99);
         activity.getQuantidade().setWrapSelectorWheel(true);
     }
 
@@ -43,7 +45,7 @@ public class AdicionarProdutoControl {
             adapterProduto = new ArrayAdapter<>(
                     activity,
                     android.R.layout.simple_list_item_1,
-                    produtoDao.getDao().queryForAll()
+                    produtoDao.queryAllActive()
             );
             activity.getProdutosSpinner().setAdapter(adapterProduto);
         } catch (SQLException e) {
@@ -60,5 +62,10 @@ public class AdicionarProdutoControl {
         } catch (SQLException e) {
 
         }
+    }
+
+    public void callCadastroProdutoActivity() {
+        Intent intent = new Intent(this.activity, CadastroProdutoActivity.class);
+        this.activity.startActivity(intent);
     }
 }

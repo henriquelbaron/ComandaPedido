@@ -10,11 +10,11 @@ import android.widget.ArrayAdapter;
 import java.sql.SQLException;
 import java.util.List;
 
-import br.com.minhapedida.AdicionarProdutoActivity;
-import br.com.minhapedida.MainActivity;
+import br.com.minhapedida.activitys.AdicionarProdutoActivity;
+import br.com.minhapedida.activitys.MainActivity;
 import br.com.minhapedida.dao.PedidoDao;
 import br.com.minhapedida.dao.ProdutoDao;
-import br.com.minhapedida.modal.Pedido;
+import br.com.minhapedida.modal.domain.Pedido;
 
 public class MainControl {
 
@@ -105,7 +105,7 @@ public class MainControl {
                 AlertDialog.Builder alerta = new AlertDialog.Builder(activity);
                 alerta.setMessage("Deseja alterar a quantidade de " + pedido + "?");
                 alerta.setIcon(android.R.drawable.ic_menu_edit);
-                alerta.setNegativeButton("-", new DialogInterface.OnClickListener() {
+                alerta.setNegativeButton("-1", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (pedido.getQuantidade() > 0) {
@@ -114,13 +114,14 @@ public class MainControl {
                         edit(pedido);
                     }
                 });
-                alerta.setPositiveButton("+", new DialogInterface.OnClickListener() {
+                alerta.setPositiveButton("+1", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         pedido.setQuantidade(pedido.getQuantidade() + 1);
                         edit(pedido);
                     }
                 });
+                alerta.setNeutralButton("Fechar", null);
                 alerta.show();
             }
         });
